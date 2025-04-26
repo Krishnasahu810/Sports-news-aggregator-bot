@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indian Sports News & Chat</title>
+  <link rel="stylesheet" href="chatbot.css"/>
+</head>
+<body>
+    <style>
+        body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 100%;
+        
+        background-image: url('https://indiantelevision.com/sites/default/files/styles/smartcrop_800x800/public/images/tv-images/2021/08/02/news.jpg?itok=eEnb05ue'); /* Replace with your image path or URL */
+        object-fit: cover;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed; /* Optional: Keeps the background fixed during scrolling */
+        color: #ffffff; /* Ensure default text color is readable */
+    }
+
+    </style>
+
+  <!-- Chatbot Overlay -->
+  <div id="chatbotContainer">
+    <video id="chatbotBackgroundVideo" autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="a (1).mp4" type="video/mp4">
+      </video>
+    <div id="chatbotInner">
+      
+
+      <!-- Close button over video -->
+      <button id="closeChatbotButton" aria-label="Close Chat">×</button>
+
+      <div id="chat-log">
+        <div class="bot-message">
+          <span style="color: beige;">Welcome to SportSphere Chat! Ask me about the latest sports news.</span>
+        </div>
+      </div>
+
+      <div id="chat-input">
+        <input type="text" id="user-input" placeholder="Type your question..." autocomplete="off"/>
+        <button id="send-button">Send</button>
+      </div>
+
+      <div id="typing-indicator"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+  <!-- Main Header + Search -->
+  <header>
+    <h1>Sport News Aggregator 🏅</h1>
+    <input type="text" id="searchInput" placeholder="Search Indian sports news..." />
+  </header>
+
+  <!-- News Grid -->
+  <main id="newsContainer"></main>
+
+  <!-- Open Chatbot -->
+  <button id="openChatbotButton">Open Chatbot</button>
+
+  <!-- Scripts -->
+  <script src="chatbot.js"></script>
+  <script src="news.js"></script>
+</body>
+</html>
